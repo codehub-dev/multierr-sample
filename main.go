@@ -13,6 +13,7 @@ func main() {
 		errors.New("call 2 failed"),
 		errors.New("call 3 failed"),
 	)
+
 	err = multierr.Append(err, nil) // successful request
 	err = multierr.Append(err, errors.New("call 5 failed"))
 
